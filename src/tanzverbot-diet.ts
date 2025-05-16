@@ -22,7 +22,7 @@ export function calcDateOnDiet( //todo: Funktionsnamen ändern
   currentWeightKg: number,
   targetWeightKg: number,
   heightCentimeters: number, 
-  ageY: number, //todo: Variabelname zu ageYears abändern
+  ageYear: number, 
   sex: Sex,
 ): number {
   const weightGainKg = targetWeightKg - currentWeightKg;
@@ -42,13 +42,13 @@ export function calcDateOnDiet( //todo: Funktionsnamen ändern
   if (sex == Sex.Male) {
     dailyCaloriesBasicMetabolicRate = Math.ceil(
       // Harris-Benedict-Formula (Male)
-      66.47 + 13.7 * currentWeightKg + 5.003 * heightCentimeters  - 6.75 * ageY, 
+      66.47 + 13.7 * currentWeightKg + 5.003 * heightCentimeters  - 6.75 * ageYear, 
       //todo: Klammern hinzufügen das die Formel richtig ausgeführt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
     );
   } else {
     dailyCaloriesBasicMetabolicRate = Math.ceil(
       // Harris-Benedict-Formula (Female)
-      655.1 + 9.563 * currentWeightKg + 1.85 * heightCentimeters - 4.676 * ageY,
+      655.1 + 9.563 * currentWeightKg + 1.85 * heightCentimeters - 4.676 * ageYear,
       //todo: Klammern hinzufügen das die Formel richtig ausgeführt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
     );
   }
