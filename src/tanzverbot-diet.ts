@@ -29,7 +29,7 @@ export function calcDateOnDiet( //todo: Funktionsnamen ändern
   if (weightGainKg < 0) {
     throw new Error(`This diet is for gaining weight, not loosing it!`);
   }
-  if (ageY < 16 || heightCentimeters < 1.5) { //falls man es in centimeter ändert müsst hier heightCentimeter < 150
+  if (ageYear < 16 || heightCentimeters < 150) {
     throw new Error(`You do not qualify for this kind of diet.`);
   }
   let dailyCaloriesOnDiet = 0;
