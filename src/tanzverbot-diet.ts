@@ -29,7 +29,7 @@ export function calcDateOnDiet( //todo: Funktionsnamen ändern
   if (weightGainKg < 0) {
     throw new Error(`This diet is for gaining weight, not loosing it!`);
   }
-  if (ageY < 16 || heightM < 1.5) { //falls man es in centimeter änder müsst hier heightCentimeter < 150
+  if (ageY < 16 || heightM < 1.5) { //falls man es in centimeter ändert müsst hier heightCentimeter < 150
     throw new Error(`You do not qualify for this kind of diet.`);
   }
   let dailyCaloriesOnDiet = 0;
@@ -43,13 +43,13 @@ export function calcDateOnDiet( //todo: Funktionsnamen ändern
     dailyCaloriesBasicMetabolicRate = Math.ceil(
       // Harris-Benedict-Formula (Male)
       66.47 + 13.7 * currentWeightKg + 5.003 * heightM * 100.0 - 6.75 * ageY, 
-      //todo: Klammern hinzufügen das die Formel richtig ausgefphrt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
+      //todo: Klammern hinzufügen das die Formel richtig ausgeführt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
     );
   } else {
     dailyCaloriesBasicMetabolicRate = Math.ceil(
       // Harris-Benedict-Formula (Female)
       655.1 + 9.563 * currentWeightKg + 1.85 * heightM * 100.0 - 4.676 * ageY,
-      //todo: Klammern hinzufügen das die Formel richtig ausgefphrt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
+      //todo: Klammern hinzufügen das die Formel richtig ausgeführt wird und ebenfalls die variabelnname ändern und das * 100 entfernen.
     );
   }
   const dailyExcessCalories =
